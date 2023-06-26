@@ -7,15 +7,22 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.venkat.digitalclininc"
         minSdk 28
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        'dagger.hilt.android.internal.disableAndroidSuperclassValidation': 'true'
+                ]
+            }
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -69,10 +76,9 @@ dependencies {
     // GSON by google
     implementation 'com.google.code.gson:gson:2.9.0'
 
-    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'androidx.annotation:annotation:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
 
     implementation project(path: ':digitalclinicservice')
 

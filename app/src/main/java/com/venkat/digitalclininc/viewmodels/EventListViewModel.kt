@@ -27,7 +27,7 @@ class EventListViewModel @Inject internal constructor(
                 _storageLiveData.value = repositoryServiceManager.getEvents()
             } catch (error: ResponseError) {
                 // TODO: Update the UI with the error message
-                // TODO: For now  the service is not available sending mock data back
+                // TODO: For now the end-points are not working so sending mock data back
                 _storageLiveData.value = EventsMockList.getEventsMockList()
             }
         }

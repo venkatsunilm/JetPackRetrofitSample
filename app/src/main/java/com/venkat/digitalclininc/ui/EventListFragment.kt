@@ -30,12 +30,13 @@ class EventListFragment : Fragment() {
         adapter = EventAdapter(listOf())
         bindingContext.eventList.adapter = adapter
 
-        eventListViewModel.getEvents()
         eventListViewModel.storageLiveData.observe(viewLifecycleOwner) { it ->
             lifecycleScope.launch {
                 bindingContext.eventList.adapter = EventAdapter(it)
             }
         }
+
+        eventListViewModel.getEvents()
 
         return bindingContext.root
     }
