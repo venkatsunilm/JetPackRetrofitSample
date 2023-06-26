@@ -16,19 +16,36 @@
 
 package com.venkat.digitalclinic.apiservice.di
 
-//@InstallIn(SingletonComponent::class)
-//@Module
-class ServiceModule {
-    // TODO: UNDER CONSTRUCTION
+import com.venkat.digitalclinic.apiservice.api.repository.IPatientDetailsService
+import com.venkat.digitalclinic.apiservice.api.repository.IPatientService
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-//    @Singleton
-//    @Provides
-//    fun provideRepositoryService(eventsService: EventsService): RepositoryServiceManager {
-//        return RepositoryServiceManager.getInstance(eventsService)
-//    }
+@Module
+@InstallIn(SingletonComponent::class)
+object ServiceModule {
 
-//    @Provides
-//    fun provideEventService(): IEventsReq {
-//        return EventsService.getInstance()
-//    }
+    @Provides
+    fun providePatientService(retrofit: Retrofit): IPatientService {
+        return retrofit.create(IPatientService::class.java)
+    }
+
+    @Provides
+    fun providePatientDetailsService(retrofit: Retrofit): IPatientDetailsService {
+        return retrofit.create(IPatientDetailsService::class.java)
+    }
+
+    @Provides
+    fun provideRetrofit(): Retrofit {
+        val baseUrl = "https://example/api/"
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }
+

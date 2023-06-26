@@ -1,19 +1,11 @@
-/*
- * Copyright (c) 2021 F-secure Corporation.
- */
-
 package com.venkat.digitalclinic.apiservice.api.repository
 
 import com.venkat.digitalclinic.apiservice.helper.ResponseError
-import com.venkat.digitalclinic.apiservice.helper.RetrofitClient
-import com.venkat.digitalclinic.apiservice.models.ResponseObject
-import kotlinx.coroutines.withTimeout
 import javax.inject.Inject
 
-class PatientRepository @Inject constructor() {
-    private var userService: IPatientService =
-        RetrofitClient.getInstance().create(IPatientService::class.java)
-
+class PatientRepository @Inject constructor(
+    private val userService: IPatientService
+) {
     suspend fun login(
         username: String,
         password: String

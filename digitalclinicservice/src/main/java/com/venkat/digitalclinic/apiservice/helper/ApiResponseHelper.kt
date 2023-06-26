@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2021 F-secure Corporation.
- */
-
 package com.venkat.digitalclinic.apiservice.helper
 
 import android.content.Context

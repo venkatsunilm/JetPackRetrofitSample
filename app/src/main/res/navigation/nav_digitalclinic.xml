@@ -11,7 +11,7 @@
         android:id="@+id/welcome_dest"
         android:name="com.venkat.digitalclininc.ui.WelcomeFragment"
         android:label="welcome page"
-        tools:layout="@layout/welcome_constr_fragment">
+        tools:layout="@layout/welcome_fragment">
         <action
             android:id="@+id/action_welcome_dest_to_loginFragment"
             app:destination="@id/login_dest" />

@@ -6,8 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.venkat.digitalclinic.apiservice.api.RepositoryServiceManager
+import com.venkat.digitalclinic.apiservice.api.repository.AppSettingsRepository
 import com.venkat.digitalclinic.apiservice.helper.ResponseError
-import com.venkat.digitalclinic.apiservice.utils.AppPreference
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.launch
@@ -15,21 +15,21 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject internal constructor(
-    @ApplicationContext private val context: Context,
-    private val repositoryServiceManager: RepositoryServiceManager
+    private val repositoryServiceManager: RepositoryServiceManager,
+    private val appSettingsRepository: AppSettingsRepository
 ) : ViewModel() {
 
     private val _username = MutableLiveData<String>("venkatsunilm@gmail.com")
-    val userName: LiveData<String>
-        get() = _username
+    val userName: LiveData<String> = _username
 
     private val _password = MutableLiveData<String>("IDon'tKnow")
-    val password: LiveData<String>
-        get() = _password
+    val password: LiveData<String> = _password
 
     private val _spinner = MutableLiveData<Boolean>(false)
-    val spinner: LiveData<Boolean>
-        get() = _spinner
+    val spinner: LiveData<Boolean> = _spinner
+
+    private val _loginResult = MutableLiveData<Boolean>()
+    val loginResult: LiveData<Boolean> = _loginResult
 
     fun login(): LiveData<String> {
         val responseObject = MutableLiveData<String>()
@@ -41,13 +41,19 @@ class LoginViewModel @Inject internal constructor(
                     _password.value!!
                 )
 
+                _loginResult.value = !responseObject.value.isNullOrEmpty()
+
                 responseObject.value?.let { token ->
                     onUserLoggedIn(token)
                 }
             } catch (error: ResponseError) {
                 // TODO: Update the UI with the error message
-                // TODO: For now  the service is not available sending mock data back
+                // TODO: For now the end-points are down, sending mock token back
                 responseObject.value = "token akjsdjsnjsnldjcnlsjncdjskjvbksjbvjdnfvkjdnf"
+                _loginResult.value = !responseObject.value.isNullOrEmpty()
+
+                onUserLoggedIn(responseObject.value!!)
+
             } finally {
                 _spinner.value = false
             }
@@ -56,8 +62,6 @@ class LoginViewModel @Inject internal constructor(
     }
 
     private fun onUserLoggedIn(token: String) {
-        // Token is stored here once the user is logged in.
-        AppPreference.getInstance(context)
-            .putString(AppPreference.Keys.TOKEN.name, token)
+        appSettingsRepository.saveToken(token)
     }
 }

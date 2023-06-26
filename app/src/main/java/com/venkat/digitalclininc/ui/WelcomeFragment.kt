@@ -8,21 +8,21 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.venkat.digitalclininc.R
-import com.venkat.digitalclininc.databinding.WelcomeConstrFragmentBinding
+import com.venkat.digitalclininc.databinding.WelcomeFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
 @AndroidEntryPoint
 class WelcomeFragment : Fragment() {
 
-    private lateinit var bindingContext: WelcomeConstrFragmentBinding
+    private lateinit var bindingContext: WelcomeFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        bindingContext = WelcomeConstrFragmentBinding.inflate(inflater, container, false)
+        bindingContext = WelcomeFragmentBinding.inflate(inflater, container, false)
         return bindingContext.root
     }
 
