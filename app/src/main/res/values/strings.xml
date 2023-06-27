@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Digital Clininc</string>
     <string name="welcome_screen_text">welcome screen image</string>
-    <string name="welcome_to_omamehlainen">WELCOME TO \nDIGITAL CLINIC!</string>
+    <string name="welcome_to_digital_clinic">WELCOME TO \nDIGITAL CLINIC!</string>
     <string name="health_services_always">Health services\n-for every individual.</string>
     <string name="secure_sign_in">sign-in</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -12,8 +12,8 @@
     <string name="don_t_have_a_finnish">Don\'t have a Finnish identity number?</string>
     <string name="written">Written</string>
     <string name="doctor_name">Doctor name</string>
-    <string name="referal_type">Referral type Referral Type</string>
-    <string name="referal_notes">Referral notes 1 \nReferral notes 2 \nReferral notes 3 </string>
+    <string name="referral_type">Referral type</string>
+    <string name="referral_notes">Referral notes 1 \nReferral notes 2 \nReferral notes 3 </string>
     <string name="prescription_notes">Prescription details about when to take is mentioned here. Patient can contact doctor as necessary</string>
     <string name="settings_fragment_text">Setting fragment sample</string>
     <string name="alert_this_page">ALERT!!! This page is under construction, please look back after sometime!!!</string>
@@ -31,4 +31,19 @@
     <string name="logout">Logout</string>
     <string name="retry">Retry</string>
     <string name="loading_text">Please wait, we are processing your request</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="user_name_or_email">User name or Email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="avatarimage">AvatarImage</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="sign_in">Sign in</string>
+    <string name="under_construction">Click Sign in, Real time Authentication, UNDER CONSTRUCTION !!!</string>
+    <string name="healthcare_image">Health care image\n\t\t\t\t</string>
+    <string name="welcome_digital_healthcare">\n</string>
+    <string name="proceed">Proceed</string>
+    <string name="app_under_construction">PARTIALLY CONSTRUCTED !!!</string>
+    <string name="date">Date</string>
+    <string name="name">Name</string>
+    <string name="book_an_appointment">Book an appointment</string>
+    <string name="chat_with_doctor">Chat with doctor</string>
 </resources>
