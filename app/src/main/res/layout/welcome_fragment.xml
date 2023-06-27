@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/light_green"
     tools:context=".WelcomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/welcome_to_omamehlainen"
+            android:text="@string/welcome_to_digital_clinic"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textColor="@color/dark_special"
             android:textStyle="bold"
@@ -50,90 +49,32 @@
             app:layout_constraintStart_toStartOf="@+id/welcome_header"
             app:layout_constraintTop_toBottomOf="@+id/welcome_header" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardView"
-            android:layout_width="0dp"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/proceed_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/light_green"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/proceed"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/dark_special"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcome_subheader">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/terms_sign_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/i_have_read"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@+id/secure_sign_in_button"
-                    app:layout_constraintEnd_toEndOf="@+id/secure_sign_in_button"
-                    app:layout_constraintStart_toStartOf="@+id/secure_sign_in_button"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/secure_sign_in_button"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    android:backgroundTint="@color/dark_special"
-                    android:paddingHorizontal="50dp"
-                    android:paddingVertical="10dp"
-                    android:text="@string/secure_sign_in"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toTopOf="@+id/terms_secure_sign_in_text"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/terms_sign_in" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/terms_secure_sign_in_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/secure_sign_in_by_telia"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@+id/other_Sign_text"
-                    app:layout_constraintEnd_toEndOf="@+id/secure_sign_in_button"
-                    app:layout_constraintStart_toStartOf="@+id/secure_sign_in_button"
-                    app:layout_constraintTop_toBottomOf="@+id/secure_sign_in_button" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/other_Sign_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLines="4"
-                    android:text="@string/or_view_the_service"
-                    android:textAlignment="textStart"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="@+id/secure_sign_in_button"
-                    app:layout_constraintStart_toStartOf="@+id/secure_sign_in_button"
-                    app:layout_constraintTop_toBottomOf="@+id/terms_secure_sign_in_text" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
+            app:layout_constraintTop_toBottomOf="@+id/welcome_subheader" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/no_finnish_number"
+            android:id="@+id/under_construction_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/don_t_have_a_finnish"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_marginTop="130dp"
+            android:text="@string/app_under_construction"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
             android:textColor="@color/dark_special"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/proceed_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

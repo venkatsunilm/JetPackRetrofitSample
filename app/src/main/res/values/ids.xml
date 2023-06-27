@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="validity_date" type="id" />
+    <item name="phone_view" type="id" />
+    <item name="constraintLayout3" type="id" />
+    <item name="welcome_header" type="id" />
 </resources>
