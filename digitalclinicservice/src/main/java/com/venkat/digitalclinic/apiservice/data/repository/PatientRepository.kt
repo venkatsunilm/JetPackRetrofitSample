@@ -1,6 +1,7 @@
-package com.venkat.digitalclinic.apiservice.api.repository
+package com.venkat.digitalclinic.apiservice.data.repository
 
-import com.venkat.digitalclinic.apiservice.helper.ResponseError
+import com.venkat.digitalclinic.apiservice.data.remote.IPatientService
+import com.venkat.digitalclinic.apiservice.utils.ResponseError
 import javax.inject.Inject
 
 class PatientRepository @Inject constructor(

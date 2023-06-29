@@ -2,7 +2,7 @@ package com.venkat.digitalclininc.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.venkat.digitalclinic.apiservice.api.RepositoryServiceManager
+import com.venkat.digitalclinic.apiservice.data.RepositoryServiceManager
 import com.venkat.digitalclinic.apiservice.models.PatientPrescription
 import com.venkat.digitalclinic.apiservice.models.ResponseObject
 import dagger.hilt.android.lifecycle.HiltViewModel

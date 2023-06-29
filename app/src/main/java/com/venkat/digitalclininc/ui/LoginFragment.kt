@@ -41,7 +41,6 @@ class LoginFragment : Fragment() {
 
         bindingContext.lifecycleOwner = viewLifecycleOwner
 
-        // TODO: Login screen partially implemented with mock data
         bindingContext.loginButton.setOnClickListener {
             loginViewModel.login()
         }
@@ -50,7 +49,6 @@ class LoginFragment : Fragment() {
     }
 
     private fun observeLoginResult() {
-        // TODO: Login screen partially implemented with mock data
         loginViewModel.loginResult.observe(viewLifecycleOwner) { success ->
             if (success) {
                 navigateToHome()

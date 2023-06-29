@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api.contracts
+package com.venkat.digitalclinic.apiservice.data.repository.contracts
 
 import com.venkat.digitalclinic.apiservice.models.ResponseObject
 

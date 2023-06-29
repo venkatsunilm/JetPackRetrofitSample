@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api.contracts
+package com.venkat.digitalclinic.apiservice.data.repository.contracts
 
 import androidx.lifecycle.LiveData
 import com.venkat.digitalclinic.apiservice.models.DigitalClinic
