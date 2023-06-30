@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.venkat.digitalclinic.apiservice.api.RepositoryServiceManager
-import com.venkat.digitalclinic.apiservice.api.mockdata.EventsMockList
-import com.venkat.digitalclinic.apiservice.helper.ResponseError
+import com.venkat.digitalclinic.apiservice.data.RepositoryServiceManager
+import com.venkat.digitalclinic.apiservice.utils.mockdata.EventsMockList
+import com.venkat.digitalclinic.apiservice.utils.ResponseError
 import com.venkat.digitalclinic.apiservice.models.PatientEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

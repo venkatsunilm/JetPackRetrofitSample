@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api.mockdata
+package com.venkat.digitalclinic.apiservice.utils.mockdata
 
 import com.venkat.digitalclinic.apiservice.models.Instructions
 import com.venkat.digitalclinic.apiservice.models.PatientEvent

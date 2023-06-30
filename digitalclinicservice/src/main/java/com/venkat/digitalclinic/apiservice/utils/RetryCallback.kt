@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api
+package com.venkat.digitalclinic.apiservice.utils
 
 import retrofit2.Call
 import retrofit2.Callback

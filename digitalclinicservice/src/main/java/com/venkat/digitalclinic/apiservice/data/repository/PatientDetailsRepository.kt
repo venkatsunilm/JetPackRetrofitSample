@@ -1,12 +1,13 @@
-package com.venkat.digitalclinic.apiservice.api.repository
+package com.venkat.digitalclinic.apiservice.data.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.venkat.digitalclinic.apiservice.api.RetryCallback
-import com.venkat.digitalclinic.apiservice.api.contracts.IPatientDetailsRepository
-import com.venkat.digitalclinic.apiservice.api.mockdata.EventsMockList
-import com.venkat.digitalclinic.apiservice.helper.ResponseError
+import com.venkat.digitalclinic.apiservice.utils.RetryCallback
+import com.venkat.digitalclinic.apiservice.data.repository.contracts.IPatientDetailsRepository
+import com.venkat.digitalclinic.apiservice.utils.mockdata.EventsMockList
+import com.venkat.digitalclinic.apiservice.data.remote.IPatientDetailsService
+import com.venkat.digitalclinic.apiservice.utils.ResponseError
 import com.venkat.digitalclinic.apiservice.models.DigitalClinic
 import com.venkat.digitalclinic.apiservice.models.PatientEvent
 import com.venkat.digitalclinic.apiservice.models.PatientPrescription

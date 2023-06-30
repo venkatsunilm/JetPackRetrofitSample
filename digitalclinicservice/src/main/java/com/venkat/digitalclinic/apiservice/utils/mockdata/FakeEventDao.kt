@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api.mockdata
+package com.venkat.digitalclinic.apiservice.utils.mockdata
 
 // TODO: Under construction
 sealed interface FakeEventDao {

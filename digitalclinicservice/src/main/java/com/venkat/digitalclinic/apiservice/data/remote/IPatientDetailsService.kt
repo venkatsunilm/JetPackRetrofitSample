@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.api.repository
+package com.venkat.digitalclinic.apiservice.data.remote
 
 import com.venkat.digitalclinic.apiservice.models.DigitalClinic
 import com.venkat.digitalclinic.apiservice.models.PatientEvent

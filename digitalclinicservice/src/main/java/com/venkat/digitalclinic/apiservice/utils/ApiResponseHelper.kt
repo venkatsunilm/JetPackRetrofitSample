@@ -1,4 +1,4 @@
-package com.venkat.digitalclinic.apiservice.helper
+package com.venkat.digitalclinic.apiservice.utils
 
 import android.content.Context
 import com.venkat.digitalclinic.apiservice.models.ResponseObject

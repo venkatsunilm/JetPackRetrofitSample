@@ -1,10 +1,10 @@
-package com.venkat.digitalclinic.apiservice.api.repository
+package com.venkat.digitalclinic.apiservice.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
-import com.venkat.digitalclinic.apiservice.api.contracts.IAppSettingsRepository
+import com.venkat.digitalclinic.apiservice.data.repository.contracts.IAppSettingsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 

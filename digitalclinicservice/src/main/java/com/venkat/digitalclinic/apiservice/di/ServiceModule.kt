@@ -16,8 +16,8 @@
 
 package com.venkat.digitalclinic.apiservice.di
 
-import com.venkat.digitalclinic.apiservice.api.repository.IPatientDetailsService
-import com.venkat.digitalclinic.apiservice.api.repository.IPatientService
+import com.venkat.digitalclinic.apiservice.data.remote.IPatientDetailsService
+import com.venkat.digitalclinic.apiservice.data.remote.IPatientService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

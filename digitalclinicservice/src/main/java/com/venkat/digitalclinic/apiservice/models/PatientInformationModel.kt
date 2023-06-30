@@ -2,6 +2,7 @@ package com.venkat.digitalclinic.apiservice.models
 
 import java.util.*
 
+// TODO: Move each data class to individual files
 data class PatientDetail(
     val patientId: UUID,
     val givenName: String,
